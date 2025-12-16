@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Heart, ArrowLeft, TrendingUp, Users, CheckCircle2, Loader2 } from "lucide-react"
+import { Heart, ArrowLeft, TrendingUp, Users, CheckCircle2, Loader2, Stethoscope } from "lucide-react"
 
 interface SurveyRow {
   [key: string]: string
@@ -56,21 +56,26 @@ export default function ReportPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="border-b bg-background/80 backdrop-blur-md sticky top-0 z-50">
+      <nav className="border-b border-blue-200 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Heart className="h-6 w-6 text-primary" />
-              <span className="text-xl font-semibold">Kuruwa</span>
+              <div className="relative">
+                <div className="absolute inset-0 bg-blue-100 rounded-full animate-pulse" />
+                <Stethoscope className="h-6 w-6 text-blue-700 relative z-10" />
+              </div>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-600 bg-clip-text text-transparent">
+                Kuruwa
+              </span>
             </div>
             <div className="flex items-center gap-6">
-              <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link href="/" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors">
                 Home
               </Link>
-              <Link href="/survey" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link href="/survey" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors ">
                 Survey
               </Link>
-              <Link href="/report" className="text-sm font-medium text-primary">
+              <Link href="/report" className="text-sm font-medium text-blue-700 border-b-2 border-blue-700 pb-1">
                 Report
               </Link>
             </div>
@@ -92,9 +97,9 @@ export default function ReportPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Survey Data Report</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Data Report</h1>
               <p className="text-lg text-muted-foreground text-pretty max-w-2xl mx-auto leading-relaxed">
-                Comprehensive analysis of {surveyData ? surveyData.total : "100+"} responses collected at Patan Temple
+                Comprehensive analysis of {surveyData ? surveyData.total : "130+"} responses collected through Google forms.
               </p>
             </div>
 

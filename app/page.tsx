@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Users, Clock, Shield, ArrowRight, MapPin, Home, Building2, CheckCircle2, Sparkles } from "lucide-react"
+import { Heart, Users, Clock, Shield, ArrowRight, MapPin, Home, Building2, CheckCircle2, Stethoscope, Hospital, Group, HandHelping, HeartHandshake, MessageCircleQuestion} from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -15,23 +15,27 @@ export default function HomePage() {
       </div>
 
       {/* Navigation */}
-      <nav className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="w-full px-8 lg:px-16 py-4">
-          <div className="flex items-center justify-between max-w-[1400px] mx-auto">
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-blue-600 rounded-lg shadow-sm">
-                <Heart className="h-5 w-5 text-white" fill="white" />
+      {/* Navigation */}
+      <nav className="border-b border-blue-200 bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="relative">
+                <div className="absolute inset-0 bg-blue-100 rounded-full animate-pulse" />
+                <Stethoscope className="h-6 w-6 text-blue-700 relative z-10" />
               </div>
-              <span className="text-xl font-bold text-blue-600">Kuruwa</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-600 bg-clip-text text-transparent">
+                Kuruwa
+              </span>
             </div>
-            <div className="flex items-center gap-10">
-              <Link href="/" className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+            <div className="flex items-center gap-6">
+              <Link href="/" className="text-sm font-medium text-blue-700 border-b-2 border-blue-700 pb-1">
                 Home
               </Link>
-              <Link href="/survey" className="text-sm font-semibold text-muted-foreground hover:text-blue-600 transition-colors">
+              <Link href="/survey" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors">
                 Survey
               </Link>
-              <Link href="/report" className="text-sm font-semibold text-muted-foreground hover:text-blue-600 transition-colors">
+              <Link href="/report" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors">
                 Report
               </Link>
             </div>
@@ -40,31 +44,28 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-28 md:py-36 relative">
+      <section className="py-28 md:py-36 relative bg-gradient-to-br from-blue-50/50 to-blue-100/20">
         <div className="w-full px-8 lg:px-16">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold rounded-full">
-                  <Sparkles className="h-4 w-4" />
-                  Code for Impact Hackathon 2025
-                </div>
+
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
                   When You Leave Home,{" "}
                   <span className="text-blue-600">Illness Feels Different</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  For students and young workers in Kathmandu, far from home and family, illness means more than
+                  For people, far from home and family, illness means more than
                   physical discomfort—it means facing recovery alone.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button size="lg" asChild className="h-12 px-8 bg-blue-600 hover:bg-blue-700">
                     <Link href="/survey" className="flex items-center gap-2">
-                      View Survey Results
+                      View Survey Testimonials
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="h-12 px-8 border-2">
+                  <Button size="lg" variant="outline" asChild className="h-12 px-8 border-2 hover:bg-purple-800">
                     <Link href="/report">See Data Report</Link>
                   </Button>
                 </div>
@@ -79,7 +80,7 @@ export default function HomePage() {
                     height={600}
                     className="w-full h-full object-cover"
                     priority
-                  />
+                  />  
                 </div>
               </div>
             </div>
@@ -94,7 +95,7 @@ export default function HomePage() {
             <div className="text-center space-y-6">
               <div className="inline-flex items-center gap-3">
                 <MapPin className="h-6 w-6 text-blue-600" />
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Life in Kathmandu Away From Home</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Life Away From Home</h2>
               </div>
             </div>
 
@@ -112,21 +113,23 @@ export default function HomePage() {
               </div>
 
               <div className="order-1 lg:order-2 space-y-8">
-                <p className="text-lg leading-relaxed">
-                  Every year, <strong className="font-semibold text-blue-600">tens of thousands of students</strong> leave
-                  their homes across Nepal and move to Kathmandu for studies or work.
-                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Colleges, coaching centers, and job opportunities make the capital a magnet for young people from
-                  districts across Nepal.
+                  Every year, tens of thousands of students and young professionals leave their homes across Nepal and move to cities like Kathmandu for studies or work. For many, this is their first experience of living away from family and familiar support systems.
+                  <br />
+                  <br />
+                  While urban migration offers opportunity, it also brings isolation. When people living alone fall sick, get hospitalized, or face medical emergencies, the absence of family support becomes deeply distressing. Emotional reassurance, help navigating hospital processes, or simply having someone by their side during recovery is often missing.
+                  <br />
+                  <br />
+                  This challenge is not limited to Kathmandu or Nepal. Across the world, students, migrant workers, travelers, and individuals living alone face similar struggles. As migration and urbanization increase globally, loneliness during illness has emerged as a growing issue, closely linked to declining mental wellbeing.
+                  <br />
+                  <br />
+                  Despite the scale and human impact of this problem, affordable, reliable, and accessible companionship during vulnerable moments remains largely unaddressed.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  For most, this is their <strong className="font-semibold text-gray-900">first time living away from family</strong>.
-                </p>
+
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-9">
               <Card className="border-blue-100 hover:shadow-md transition-shadow">
                 <CardContent className="p-8">
                   <div className="p-3 bg-blue-600 rounded-lg inline-block mb-6">
@@ -151,24 +154,17 @@ export default function HomePage() {
                   <p className="font-medium leading-relaxed">Navigate fast-paced, competitive city life</p>
                 </CardContent>
               </Card>
-            </div>
-
-            <div className="p-10 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="text-lg text-center leading-relaxed max-w-3xl mx-auto">
-                While the city offers opportunity, it also quietly removes something essential — the everyday care we
-                take for granted at home.
-              </p>
-            </div>
+            </div>  
           </div>
         </div>
       </section>
 
       {/* Getting Sick When Alone */}
-      <section className="py-24">
-        <div className="w-full px-8 lg:px-16">
+      <section className="py-24 bg-gradient-to-br from-blue-50/50 to-blue-100/20">
+        <div className="w-full px-8 lg:px-10">
           <div className="max-w-[1400px] mx-auto space-y-20">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              Getting Sick <span className="text-red-600">When You're Alone</span>
+              Getting Sick <span className="text-blue-600">When You're Alone</span>
             </h2>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -200,7 +196,7 @@ export default function HomePage() {
                   <CardContent className="p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <Heart className="h-6 w-6 text-red-600" />
-                      <h3 className="text-lg font-semibold text-red-800">In Kathmandu, sickness looks different:</h3>
+                      <h3 className="text-lg font-semibold text-red-800">Away from home, sickness looks different:</h3>
                     </div>
                     <ul className="space-y-4">
                       <li className="flex items-start gap-3">
@@ -236,51 +232,14 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
-            <div className="p-10 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="text-xl font-semibold text-center text-blue-900 leading-relaxed max-w-3xl mx-auto">
-                "The illness is manageable, but being alone makes it mentally much harder."
-              </p>
-              <p className="text-sm text-muted-foreground text-center mt-4">
-                — Survey respondent, Patan Hospital
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* The Hidden Problem */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/50 to-blue-100/20">
-        <div className="w-full px-8 lg:px-16">
-          <div className="max-w-[1200px] mx-auto space-y-12">
-            <div className="text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                The Hidden Problem — <span className="text-blue-600">Mental Stress During Physical Illness</span>
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                For young people living alone in Kathmandu, illness triggers more than physical discomfort
-              </p>
-            </div>
-            
-            <Card className="border border-blue-200 bg-white shadow-lg">
-              <CardContent className="p-12 text-center">
-                <div className="p-4 bg-blue-600 rounded-xl inline-block mb-8">
-                  <Heart className="h-12 w-12 text-white" fill="white" />
-                </div>
-                <p className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 leading-tight">
-                  "Who stays with you when you're sick and away from home?"
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  Kuruwa exists to answer this question.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+
 
       {/* Why Existing Systems Fall Short */}
-      <section className="py-24">
+      <section className="py-24 bg-gradient-to-br from-blue-50/50 to-blue-100/20">
         <div className="w-full px-8 lg:px-16">
           <div className="max-w-[1400px] mx-auto space-y-16">
             <div className="text-center space-y-4">
@@ -294,24 +253,28 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-blue-100 hover:border-blue-300 transition-colors">
                 <CardContent className="p-8">
+                  <Hospital className="h-6 w-6 text-blue-700 relative z-10" />
                   <p className="text-lg font-semibold text-blue-600 mb-2">Hospitals</p>
                   <p className="text-muted-foreground">focus on treatment, not companionship</p>
                 </CardContent>
               </Card>
               <Card className="border-blue-100 hover:border-blue-300 transition-colors">
                 <CardContent className="p-8">
+                  <HeartHandshake className="h-6 w-6 text-blue-700 relative z-10" />
                   <p className="text-lg font-semibold text-blue-600 mb-2">Friends and roommates</p>
                   <p className="text-muted-foreground">may not always be available</p>
                 </CardContent>
               </Card>
               <Card className="border-blue-100 hover:border-blue-300 transition-colors">
                 <CardContent className="p-8">
+                  <HandHelping className="h-6 w-6 text-blue-700 relative z-10" />
                   <p className="text-lg font-semibold text-blue-600 mb-2">Hiring personal care</p>
                   <p className="text-muted-foreground">feels expensive or awkward</p>
                 </CardContent>
               </Card>
               <Card className="border-blue-100 hover:border-blue-300 transition-colors">
                 <CardContent className="p-8">
+                  <MessageCircleQuestion className="h-6 w-6 text-blue-700 relative z-10" />
                   <p className="text-lg font-semibold text-blue-600 mb-2">Asking strangers</p>
                   <p className="text-muted-foreground">for help feels unsafe</p>
                 </CardContent>
@@ -492,11 +455,11 @@ export default function HomePage() {
                   Kuruwa isn't just about treating illness — it's about making sure no one faces it alone.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" variant="secondary" asChild className="h-12 px-8">
+                  <Button size="lg" variant="outline" asChild className="h-12 px-8 border-2 hover:bg-purple-800">
                     <Link href="/survey">View Survey Testimonials</Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="h-12 px-8 bg-white hover:bg-gray-50">
-                    <Link href="/report">See Full Report</Link>
+                  <Button size="lg" variant="outline" asChild className="h-12 px-8 border-2 hover:bg-purple-800">
+                    <Link href="/report">See Data Report</Link>
                   </Button>
                 </div>
               </CardContent>

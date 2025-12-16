@@ -89,7 +89,7 @@ export default function SurveyPage() {
                 Patient Experience Survey
               </h1>
               <p className="text-lg text-gray-600 text-pretty max-w-3xl mx-auto leading-relaxed">
-                Real voices from <span className="font-bold text-blue-700">124 participants</span> at Patan 
+                Real voices from <span className="font-bold text-blue-700">30+ participants</span> at Patan 
                 sharing their healthcare experiences and emotional support needs
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function SurveyPage() {
                   <div className="mb-4 inline-flex p-4 bg-blue-100 rounded-2xl">
                     <Users className="h-7 w-7 text-blue-700" />
                   </div>
-                  <div className="text-4xl font-bold text-blue-800 mb-2">102</div>
+                  <div className="text-4xl font-bold text-blue-800 mb-2">30+</div>
                   <p className="text-sm font-medium text-gray-600">Patient Participants</p>
                 </CardContent>
               </Card>
@@ -237,29 +237,29 @@ export default function SurveyPage() {
                   </div>
                   <CardTitle className="text-2xl text-blue-900">Patient Insights</CardTitle>
                 </div>
-                <CardDescription className="text-base text-gray-600">Powerful quotes from healthcare experiences</CardDescription>
+                <CardDescription className="text-base text-gray-600">Powerful quotes from healthcare experiences collected through google forms.</CardDescription>
               </CardHeader>
               <CardContent className="p-10 space-y-6">
                 {[
                   {
                     quote:
-                      "When I was hospitalized abroad, the nights were the hardest. Having someone there would have made all the difference.",
-                    author: "International Student, Age 24",
+                      "Its so hard to stay alone when you stay away from home and we miss our home.",
+                    author: "International Student, Pune, Age 20",
                   },
                   {
                     quote:
-                      "Emotional support isn't a luxury during illness—it's a necessity. The mind and body heal together.",
-                    author: "Healthcare Worker, Age 38",
+                      "The support is needed if you are new in city and have no idea how things work in following hospital and to assure you that you aren't alone and have a companion to share your worries and your difficulties.",
+                    author: "+2 Student, Nepal, Age 17",
                   },
                   {
                     quote:
-                      "I never realized how isolating a hospital stay could be until I experienced it myself. This service would be life-changing.",
-                    author: "Local Resident, Age 52",
+                      "From my experience, having someone to help with simple things like bringing meals, checking on me, or just talking made a big difference during illness. It reduces stress and helps you recover better. Support doesn’t always have to be big sometimes kindness and presence are enough.",
+                    author: "International Student, Pune, Age 21",
                   },
                   {
                     quote:
-                      "As a parent, knowing my child could have someone trustworthy with them if needed gives me peace of mind.",
-                    author: "Parent & Temple Visitor, Age 45",
+                      "Many need assistance in order to get better in a hospital like help with food, hygiene, or communicating with doctors, or even something simple like a massage. Depending on what situation the patient is in, they do need to have a choice of hiring a companion/support to help with needs otherwise not doable while being alone. The pricing for a companion should be based on which type of service is provided, for how long, and also the age of the patient.",
+                    author: "Currently Working Professional, Nepal, Age 23",
                   },
                 ].map((item, idx) => (
                   <div
@@ -292,7 +292,7 @@ export default function SurveyPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-blue-900">Explore Patient Data Analysis</h3>
                     <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
-                      View comprehensive healthcare statistics and insights from our 102 patient survey responses
+                      View comprehensive healthcare statistics and insights from our 130+ patient survey responses
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                       <Button
