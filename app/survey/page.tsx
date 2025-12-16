@@ -47,7 +47,7 @@ export default function SurveyPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="relative">
-                <div className="absolute inset-0 bg-blue-100 rounded-full animate-pulse" />
+                <div className="absolute bg-blue-100 rounded-full animate-pulse" />
                 <Stethoscope className="h-6 w-6 text-blue-700 relative z-10" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-600 bg-clip-text text-transparent">
@@ -68,15 +68,6 @@ export default function SurveyPage() {
           </div>
         </div>
       </nav>
-
-      {/* Back Button */}
-      <div className="container mx-auto px-4 py-6">
-        <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50" asChild>
-          <Link href="/">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
-          </Link>
-        </Button>
-      </div>
 
       <section className="py-16 pb-24">
         <div className="container mx-auto px-4">

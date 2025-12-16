@@ -48,7 +48,7 @@ export default function ReportPage() {
   }
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-gradient-to-b from-blue-50/30 to-white">
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-20 w-[450px] h-[450px] bg-secondary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-20 w-[550px] h-[550px] bg-accent/5 rounded-full blur-3xl" />
@@ -61,7 +61,7 @@ export default function ReportPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="relative">
-                <div className="absolute inset-0 bg-blue-100 rounded-full animate-pulse" />
+                <div className="absolute bg-blue-100 rounded-full animate-pulse" />
                 <Stethoscope className="h-6 w-6 text-blue-700 relative z-10" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-600 bg-clip-text text-transparent">
@@ -82,16 +82,6 @@ export default function ReportPage() {
           </div>
         </div>
       </nav>
-
-      {/* Back Button */}
-      <div className="container mx-auto px-4 py-6">
-        <Button variant="ghost" asChild>
-          <Link href="/">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
-          </Link>
-        </Button>
-      </div>
-
       {/* Report Content */}
       <section className="py-12 pb-20">
         <div className="container mx-auto px-4">
@@ -169,7 +159,7 @@ export default function ReportPage() {
                       <div className="mb-3 inline-flex p-3 bg-primary/10 rounded-lg">
                         <TrendingUp className="h-6 w-6 text-primary" />
                       </div>
-                      <div className="text-4xl font-bold text-primary mb-2">92%</div>
+                      <div className="text-4xl font-bold text-primary mb-2">97.7%</div>
                       <p className="text-sm text-muted-foreground">Believe emotional support aids recovery</p>
                     </CardContent>
                   </Card>
@@ -178,7 +168,7 @@ export default function ReportPage() {
                       <div className="mb-3 inline-flex p-3 bg-secondary/10 rounded-lg">
                         <Users className="h-6 w-6 text-secondary" />
                       </div>
-                      <div className="text-4xl font-bold text-secondary mb-2">85%</div>
+                      <div className="text-4xl font-bold text-secondary mb-2">78.9%</div>
                       <p className="text-sm text-muted-foreground">Experienced loneliness while hospitalized</p>
                     </CardContent>
                   </Card>
@@ -187,7 +177,7 @@ export default function ReportPage() {
                       <div className="mb-3 inline-flex p-3 bg-accent/10 rounded-lg">
                         <CheckCircle2 className="h-6 w-6 text-accent" />
                       </div>
-                      <div className="text-4xl font-bold text-accent mb-2">96%</div>
+                      <div className="text-4xl font-bold text-accent mb-2">87.1%</div>
                       <p className="text-sm text-muted-foreground">Would use Kuruwa service</p>
                     </CardContent>
                   </Card>
@@ -197,7 +187,7 @@ export default function ReportPage() {
                 <Card className="mb-8 shadow-lg">
                   <CardHeader>
                     <CardTitle>Age Distribution of Respondents</CardTitle>
-                    <CardDescription>Survey participants across different age groups (N=102)</CardDescription>
+                    <CardDescription>Survey participants across different age groups (N=132)</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -208,45 +198,45 @@ export default function ReportPage() {
                       <ul className="space-y-3">
                         <li className="flex items-start gap-3">
                           <div className="w-16 h-16 rounded-lg bg-chart-1/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl font-bold text-chart-1">32</span>
+                            <span className="text-2xl font-bold text-chart-1">16</span>
                           </div>
                           <div>
-                            <h4 className="font-semibold">Ages 18-25</h4>
+                            <h4 className="font-semibold">Ages 13-17</h4>
                             <p className="text-sm text-muted-foreground">
-                              Young adults and students, representing the largest demographic
+                              Young students and adolescents.
                             </p>
                           </div>
                         </li>
                         <li className="flex items-start gap-3">
                           <div className="w-16 h-16 rounded-lg bg-chart-2/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl font-bold text-chart-2">28</span>
+                            <span className="text-2xl font-bold text-chart-2">69</span>
                           </div>
                           <div>
-                            <h4 className="font-semibold">Ages 26-35</h4>
+                            <h4 className="font-semibold">Ages 18-19</h4>
+                            <p className="text-sm text-muted-foreground">
+                              College students and young adults, representing the largest demographic segment
+                            </p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-16 h-16 rounded-lg bg-chart-3/20 flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xl font-bold text-chart-3">22</span>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold">Ages 20-25</h4>
                             <p className="text-sm text-muted-foreground">
                               Working professionals and early-career individuals
                             </p>
                           </div>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-16 h-16 rounded-lg bg-chart-3/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl font-bold text-chart-3">24</span>
+                          <div className="w-16 h-16 rounded-lg bg-chart-4/20 flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xl font-bold text-chart-4">9</span>
                           </div>
                           <div>
-                            <h4 className="font-semibold">Ages 36-50</h4>
+                            <h4 className="font-semibold">Ages 25+</h4>
                             <p className="text-sm text-muted-foreground">
                               Mid-career professionals with family responsibilities
-                            </p>
-                          </div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-16 h-16 rounded-lg bg-chart-4/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl font-bold text-chart-4">18</span>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold">Ages 51+</h4>
-                            <p className="text-sm text-muted-foreground">
-                              Senior respondents with rich life experiences
                             </p>
                           </div>
                         </li>
@@ -265,26 +255,22 @@ export default function ReportPage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           Respondents overwhelmingly agreed that emotional support plays a critical role in recovery:
                         </p>
                         <div className="space-y-3">
-                          <div className="flex items-center justify-between p-3 bg-chart-1/10 rounded-lg">
-                            <span className="font-medium">Strongly Agree</span>
-                            <span className="text-lg font-bold text-chart-1">68%</span>
-                          </div>
                           <div className="flex items-center justify-between p-3 bg-chart-2/10 rounded-lg">
                             <span className="font-medium">Agree</span>
-                            <span className="text-lg font-bold text-chart-2">24%</span>
+                            <span className="text-lg font-bold text-chart-2">62.1%</span>
                           </div>
                           <div className="flex items-center justify-between p-3 bg-chart-3/10 rounded-lg">
                             <span className="font-medium">Neutral</span>
-                            <span className="text-lg font-bold text-chart-3">6%</span>
+                            <span className="text-lg font-bold text-chart-3">35.6%</span>
                           </div>
                           <div className="flex items-center justify-between p-3 bg-chart-4/10 rounded-lg">
                             <span className="font-medium">Disagree</span>
-                            <span className="text-lg font-bold text-chart-4">2%</span>
+                            <span className="text-lg font-bold text-chart-4">2.3%</span>
                           </div>
                         </div>
                       </div>
@@ -294,7 +280,6 @@ export default function ReportPage() {
                   <Card className="shadow-lg">
                     <CardHeader>
                       <CardTitle>Primary Concerns During Illness</CardTitle>
-                      <CardDescription>Respondents could select multiple concerns</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
@@ -307,45 +292,45 @@ export default function ReportPage() {
                               className="flex-1 bg-chart-2/20 h-10 rounded-lg flex items-center px-4"
                               style={{ width: "100%" }}
                             >
-                              <span className="text-sm font-medium">Loneliness</span>
+                              <span className="text-sm font-medium">Difficulty in managing personal needs (food, hygiene)</span>
                             </div>
-                            <span className="text-lg font-bold text-chart-2 w-12 text-right">85</span>
+                            <span className="text-lg font-bold text-chart-2 w-12 text-right">34.2%</span>
                           </div>
                           <div className="flex items-center gap-3">
                             <div
                               className="flex-1 bg-chart-2/20 h-10 rounded-lg flex items-center px-4"
                               style={{ width: "91.7%" }}
                             >
-                              <span className="text-sm font-medium">Mental Health</span>
+                              <span className="text-sm font-medium">Difficulty in communicating with hospital staff</span>
                             </div>
-                            <span className="text-lg font-bold text-chart-2 w-12 text-right">78</span>
+                            <span className="text-lg font-bold text-chart-2 w-12 text-right">10.5%</span>
                           </div>
                           <div className="flex items-center gap-3">
                             <div
                               className="flex-1 bg-chart-2/20 h-10 rounded-lg flex items-center px-4"
                               style={{ width: "84.7%" }}
                             >
-                              <span className="text-sm font-medium">Recovery Time</span>
+                              <span className="text-sm font-medium">Emotional stress / fear</span>
                             </div>
-                            <span className="text-lg font-bold text-chart-2 w-12 text-right">72</span>
+                            <span className="text-lg font-bold text-chart-2 w-12 text-right">25%</span>
                           </div>
                           <div className="flex items-center gap-3">
                             <div
                               className="flex-1 bg-chart-2/20 h-10 rounded-lg flex items-center px-4"
                               style={{ width: "76.5%" }}
                             >
-                              <span className="text-sm font-medium">Practical Help</span>
+                              <span className="text-sm font-medium">Wasn't alone</span>
                             </div>
-                            <span className="text-lg font-bold text-chart-2 w-12 text-right">65</span>
+                            <span className="text-lg font-bold text-chart-2 w-12 text-right">46.1%</span>
                           </div>
                           <div className="flex items-center gap-3">
                             <div
                               className="flex-1 bg-chart-2/20 h-10 rounded-lg flex items-center px-4"
                               style={{ width: "68.2%" }}
                             >
-                              <span className="text-sm font-medium">Communication</span>
+                              <span className="text-sm font-medium">Never admitted</span>
                             </div>
-                            <span className="text-lg font-bold text-chart-2 w-12 text-right">58</span>
+                            <span className="text-lg font-bold text-chart-2 w-12 text-right">1.3%</span>
                           </div>
                         </div>
 
@@ -394,8 +379,7 @@ export default function ReportPage() {
                       <div>
                         <h4 className="font-semibold mb-1">Evening Hours Critical</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          78% of respondents noted that evening and night hours are when loneliness feels most acute,
-                          highlighting the need for flexible companion availability.
+                          Respondents noted that they might use the service when feeling unsafe while staying alone or walking home after discharge, especially during night hours, highlighting the need for reliable and flexible companion support.
                         </p>
                       </div>
                     </div>
@@ -407,8 +391,7 @@ export default function ReportPage() {
                       <div>
                         <h4 className="font-semibold mb-1">Strong Interest in Solution</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          96% of respondents indicated they would use or recommend a service like Kuruwa, with many
-                          offering to volunteer as companions themselves.
+                          87.1% of respondents indicated they would use or recommend a service like Kuruwa.
                         </p>
                       </div>
                     </div>
@@ -424,21 +407,19 @@ export default function ReportPage() {
                     <div>
                       <h4 className="font-semibold mb-2">Location & Participants</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Surveys were conducted at Patan Temple with 102 participants, including local residents,
-                        domestic visitors, and international tourists. Age range: 18-75 years.
+                        A total of 160+ responses were collected through a combination of physical and digital surveys. Over 30 participants were interviewed in person at Patan Temple, representing various age groups and nationalities, while 130+ responses were gathered digitally via Google Forms from friends, colleagues, and seniors.
                       </p>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Data Collection</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Mixed methods approach combining Google Forms questionnaire with video and audio interviews for
-                        deeper qualitative insights.
+                        The survey used a mixed-methods approach: structured questionnaires provided quantitative insights, and short video/audio interactions during physical surveys captured qualitative perspectives.
                       </p>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Time Period</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Data collected over 3 days to ensure diverse participant demographics and authentic responses.
+                        Data collection took place over three days to ensure diverse participant demographics and authentic responses.
                       </p>
                     </div>
                   </CardContent>
@@ -474,8 +455,8 @@ export default function ReportPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Heart className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">Kuruwa</span>
+              <Stethoscope className="h-5 w-5 text-blue-700" />
+              <span className="text-sm font-bold text-blue-800">Kuruwa</span>
             </div>
             <p className="text-sm text-muted-foreground text-center">
               Submitted for Code for Impact Hackathon 2025 | US Embassy
