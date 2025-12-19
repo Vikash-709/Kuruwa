@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Users, Clock, Shield, ArrowRight, MapPin, Home, Building2, CheckCircle2, Stethoscope, Hospital, Group, HandHelping, HeartHandshake, MessageCircleQuestion, Sparkle, ShieldCheck, MonitorDot, PersonStanding} from "lucide-react"
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: {
+    default: "Kuruwa",
+    template: "%s",
+  },
+}
+
 export default function HomePage() {
   return (
     <div className="min-h-screen relative bg-background">
