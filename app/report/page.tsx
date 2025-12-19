@@ -459,7 +459,7 @@ export default function ReportPage() {
               <span className="text-sm font-bold text-blue-800">Kuruwa</span>
             </div>
             <p className="text-sm text-muted-foreground text-center">
-              Submitted for Code for Impact Hackathon 2025 | US Embassy
+              Built with care
             </p>
           </div>
         </div>

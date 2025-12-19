@@ -319,8 +319,7 @@ export default function SurveyPage() {
               <span className="text-sm font-bold text-blue-800">Kuruwa</span>
             </div>
             <p className="text-sm text-gray-600 text-center">
-              Submitted for <span className="font-semibold text-blue-800">Code for Impact Hackathon 2025</span> | US
-              Embassy
+              Built with care
             </p>
           </div>
         </div>

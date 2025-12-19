@@ -497,7 +497,7 @@ export default function HomePage() {
               <span className="text-sm font-bold text-blue-800">Kuruwa</span>
             </div>
               <p className="text-sm text-muted-foreground text-center">
-                Built with care for Code for Impact Hackathon 2025
+                Built with care
               </p>
             </div>
           </div>
