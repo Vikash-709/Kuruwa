@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Kuruwa | Code for Impact Hackathon",
+  title: "Kuruwa",
   description:
-    "Connecting hospitalized international students with caring companions - A solution for emotional support during illness",
+    "Connecting hospitalized people with caring companions - A solution for emotional support during illness",
   generator: "v0.app",
   icons: {
     icon: [
